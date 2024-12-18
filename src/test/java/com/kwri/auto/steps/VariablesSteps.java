@@ -13,7 +13,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import static com.kwri.auto.config.Config.PROPERTIES;
-import static org.apache.commons.lang3.RandomStringUtils.*;
+import static org.apache.commons.lang3.RandomStringUtils.random;
+import static org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric;
+import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
 import static org.hamcrest.Matchers.notNullValue;
 
 /**

@@ -6,13 +6,12 @@ import com.kwri.auto.pages.accounting.AdministrationPage;
 import com.kwri.auto.pages.accounting.CloudmorePage;
 import com.kwri.auto.ui.methods.Common;
 import com.kwri.auto.utils.DriverUtils;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.TimeoutException;
 
-import static com.kwri.auto.enums.Urls.*;
-import static org.junit.Assert.assertFalse;
+import static com.kwri.auto.enums.Urls.ACCOUNTING_APPLET;
+import static com.kwri.auto.enums.Urls.CLOUDMORE_PAGE;
 import static org.junit.Assert.assertTrue;
 
 /**

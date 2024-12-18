@@ -17,7 +17,6 @@ public enum DefaultOrg {
     KWFS_TEST_TEAMS_BRAVO_7(1004228896),
     KWRI_ORG_ID(101);
 
-
     private final int value;
 
     DefaultOrg(final int value) {

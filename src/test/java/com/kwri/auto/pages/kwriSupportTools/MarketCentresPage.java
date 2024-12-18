@@ -21,7 +21,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.kwri.auto.enums.Endpoints.*;
+import static com.kwri.auto.enums.Endpoints.KW_FS_ORGANIZATION;
+import static com.kwri.auto.enums.Endpoints.KW_FS_ACCOUNTS_API_KEY;
+import static com.kwri.auto.enums.Endpoints.ORGS;
 import static com.kwri.auto.enums.Versions.V1;
 import static io.restassured.http.Method.GET;
 import static org.apache.http.HttpStatus.SC_OK;
@@ -75,6 +77,16 @@ public class MarketCentresPage extends BasePage {
 
     @Inject
     private GeneralWhenSteps generalWhenSteps;
+
+    /**
+     * Instantiates a new Market Centres tab page.
+     *
+     * @param world the world
+     */
+    @Inject
+    public MarketCentresPage(final World world) {
+        super(world);
+    }
     /**
      * Gets current URL.
      *
@@ -91,17 +103,6 @@ public class MarketCentresPage extends BasePage {
     public void userOpensChartOfAccountsSubMenu() {
         this.common.waitForPageToLoad();
         getBtnChartOfAccounts().click();
-    }
-
-
-    /**
-     * Instantiates a new Market Centres tab page.
-     *
-     * @param world the world
-     */
-    @Inject
-    public MarketCentresPage(final World world) {
-        super(world);
     }
 
     /**

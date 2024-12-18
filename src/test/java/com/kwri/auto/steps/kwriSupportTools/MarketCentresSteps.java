@@ -9,7 +9,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static com.kwri.auto.enums.Urls.*;
+import static com.kwri.auto.enums.Urls.SUPPORT_TOOLS_FINANCIAL_STATEMENT_CHART_OF_ACCOUNTS_PAGE;
+import static com.kwri.auto.enums.Urls.SUPPORT_TOOLS_ASSOCIATES_PAGE;
+import static com.kwri.auto.enums.Urls.COMMAND_PAGE;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -154,7 +156,6 @@ public class MarketCentresSteps {
         this.common.waitForPageToLoad();
         this.marketCentresPage.clickOnGenerateNewApiKeyBtn();
     }
-
 
     /**
      * User is redirected to Command home page (.../command).

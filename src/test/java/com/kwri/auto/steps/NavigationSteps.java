@@ -11,7 +11,9 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.NoSuchElementException;
 
 import static com.kwri.auto.config.Config.ENV;
-import static com.kwri.auto.enums.Urls.*;
+import static com.kwri.auto.enums.Urls.SUPPORT_TOOLS_DIRECTORY_PAGE;
+import static com.kwri.auto.enums.Urls.ACCOUNTING_APPLET;
+import static com.kwri.auto.enums.Urls.SUPPORT_TOOLS_FINANCIAL_STATEMENT_CHART_OF_ACCOUNTS_PAGE;
 
 /**
  * The type Navigation steps.
@@ -31,7 +33,6 @@ public class NavigationSteps {
     public void openHomePage() {
         this.navigation.getWebDriver().get(ENV.getBaseUri());
     }
-
 
     /**
      * Open Support Tools using url.
@@ -102,7 +103,6 @@ public class NavigationSteps {
         this.driverUtils.refreshTab();
         this.driverUtils.waitLoaderDisappear();
     }
-
 
     /**
      * Open Support Tools > 'Financial Statement-> Chart of Accounts' page using url.

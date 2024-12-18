@@ -248,7 +248,7 @@ jobs:
       - run_on_demand
 
 workflows:
-  regression_tests:
+  scheduled_tests:
     when:
       and:
         - equal: [ 'Scheduled Execution', << pipeline.parameters.ExecutionType >> ]
@@ -267,6 +267,25 @@ workflows:
                 - master
                 - /^fix\/\S*$/
                 - /^feature\/\S*$/
+  regression_tests:
+    when:
+      and:
+        - equal: [ 'Regression', << pipeline.parameters.ExecutionType >> ]
+    jobs:
+      - build_validation:
+          context:
+            - vault-jwt-<< pipeline.parameters.ENVIRONMENT >>-testops
+      - regression_tests:
+          requires:
+            - build_validation
+          context:
+            - vault-jwt-<< pipeline.parameters.ENVIRONMENT >>-testops
+        filters:
+          branches:
+            only:
+              - master
+              - /^fix\/\S*$/
+              - /^feature\/\S*$/
 
   on_demand:
     when:
