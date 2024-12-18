@@ -38,7 +38,7 @@ Feature: KWRI Support Tools Financial Statement > Chart of Accounts
       | AVENGERSMCMARKETCENTERLEADER     | user is redirected to Command home page            |
       | AVENGERSREGOPERATIONSMANAGER     | user is redirected to Command home page            |
       | TEAMSBRAVOEXECUTIVE              | user is on Support Tools>Directory>Associates page |
-      | TEAMSBRAVOANALYST                | user is on Support Tools>Directory>Associates page |
+      | TEAMSBRAVOANALYST                | user is redirected to Command home page |
       | TEAMSBRAVOREGIONALDIVISIONLEADER | user is on Support Tools>Directory>Associates page |
       | TEAMSBRAVOMCANGEL                | user is on Support Tools>Directory>Associates page |
 
