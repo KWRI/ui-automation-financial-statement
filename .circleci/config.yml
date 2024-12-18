@@ -264,7 +264,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
                 - /^fix\/\S*$/
                 - /^feature\/\S*$/
   regression_tests:
@@ -283,7 +283,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
                 - /^fix\/\S*$/
                 - /^feature\/\S*$/
 
