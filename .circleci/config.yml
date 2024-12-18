@@ -238,7 +238,7 @@ jobs:
     executor: default_executor
     steps:
       - run_build_validation
-  regression_tests:
+  regression_tests_run:
     executor: default_executor
     steps:
       - run-regression-tests
@@ -256,7 +256,7 @@ workflows:
       - build_validation:
           context:
             - vault-jwt-<< pipeline.parameters.ENVIRONMENT >>-testops
-      - regression_tests:
+      - regression_tests_run:
           requires:
             - build_validation
           context:
@@ -275,7 +275,7 @@ workflows:
       - build_validation:
           context:
             - vault-jwt-<< pipeline.parameters.ENVIRONMENT >>-testops
-      - regression_tests:
+      - regression_tests_run:
           requires:
             - build_validation
           context:
