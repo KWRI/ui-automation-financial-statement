@@ -280,12 +280,12 @@ workflows:
             - build_validation
           context:
             - vault-jwt-<< pipeline.parameters.ENVIRONMENT >>-testops
-        filters:
-          branches:
-            only:
-              - master
-              - /^fix\/\S*$/
-              - /^feature\/\S*$/
+          filters:
+            branches:
+              only:
+                - master
+                - /^fix\/\S*$/
+                - /^feature\/\S*$/
 
   on_demand:
     when:
