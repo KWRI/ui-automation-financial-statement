@@ -1,0 +1,7 @@
+*.iml
+.idea
+target/
+build/reports/tests
+src/test/resources/passwords.properties
+.allure
+build/*
