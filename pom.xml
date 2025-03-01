@@ -16,7 +16,7 @@
         <maven.compiler.version>3.8.1</maven.compiler.version>
 
         <cucumber.version>7.15.0</cucumber.version>
-        <selenium.version>4.7.2</selenium.version>
+        <selenium.version>4.28.0</selenium.version>
         <aspectj.version>1.9.6</aspectj.version>
         <lombok.version>1.18.30</lombok.version>
         <jackson.core.version>2.9.8</jackson.core.version>
@@ -150,12 +150,7 @@
                         <configuration>
                             <target>
                                 <echo message="Running JUnit Platform CLI" level="info"/>
-                                <java classname="org.junit.platform.console.ConsoleLauncher"
-                                      fork="true"
-                                      failonerror="false"
-                                      newenvironment="true"
-                                      maxmemory="512m"
-                                      classpathref="maven.test.classpath">
+                                <java classname="org.junit.platform.console.ConsoleLauncher" fork="true" failonerror="false" newenvironment="true" maxmemory="512m" classpathref="maven.test.classpath">
                                     <arg value="--include-engine"/>
                                     <arg value="cucumber"/>
                                     <arg value="--scan-classpath"/>
