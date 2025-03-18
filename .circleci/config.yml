@@ -63,9 +63,8 @@ commands:
       - store_artifacts:
           path: standard_out.txt
       - send-xray-report-to-jira
-      - get-allure-history
-      - generate-allure-report
-      - store-allure-artifacts
+      - generate-cucumber-report
+      - store-cucumber-artifacts
 
   run-regression-tests:
     description: "Run Regression Tests"
@@ -86,9 +85,8 @@ commands:
       - store_artifacts:
           path: standard_out.txt
       - send-xray-report-to-jira
-      - get-allure-history
-      - generate-allure-report
-      - store-allure-artifacts
+      - generate-cucumber-report
+      - store-cucumber-artifacts
 
   # below are "private" commands used as a part of general commands above only
   generate-allure-report:
@@ -178,6 +176,27 @@ commands:
       - store_artifacts:
           path: target/site
           destination: Report/Checkstyle
+
+  generate-cucumber-report:
+    description: Generate test run cucumber report
+    steps:
+      - run:
+          name: Cucumber report generation
+          command: mvn test -DskipTests
+      - store_artifacts:
+          path: ~/ui-automation-financial-statement/target/cucumber-html-reports/
+
+  store-cucumber-artifacts:
+    description: Store Cucumber generated artifacts
+    steps:
+      - store_test_results:
+          path: ~/ui-automation-financial-statement/target/cucumber-html-reports/
+      - run:
+          name: Archive artifacts
+          when: always
+          command: tar -cvf artifacts-<< pipeline.parameters.TestTag >>.tar target/xray-report ;
+      - store_artifacts:
+          path: artifacts-<< pipeline.parameters.TestTag >>.tar
 
   send-xray-report-to-jira:
     steps:
