@@ -14,6 +14,9 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
+    @Manual
+    Examples:
+      | user                  |
       | TEAMSBRAVOLEGAL       |
       | TEAMSBRAVOSUPPORT     |
     @PROD
@@ -32,6 +35,9 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
+   @Manual
+    Examples:
+      | user                  |
       | TEAMSBRAVOLEGAL       |
       | TEAMSBRAVOSUPPORT     |
     @PROD
@@ -54,7 +60,6 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
-      | TEAMSBRAVOLEGAL       |
 
   @TRX-158653 @tmsLink=TRX-158653 @QA
   Scenario Outline: Verification of an ability to see 'AccountEdge' tab default state in Support Tools>Directory>Market Centers/Organizations>MC details by KWRI user with permissions for active Canadian MC
@@ -68,7 +73,6 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
-      | TEAMSBRAVOLEGAL       |
 
   @TRX-158659 @tmsLink=TRX-158659 @e2e @QA
   Scenario Outline: Verification of an ability to generate new api key in Support Tools>Directory>Market Centers/Organizations>MC details> 'AccountEdge' tab by KWRI user with permissions for active NA MC with api key
@@ -87,7 +91,6 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
-      | TEAMSBRAVOLEGAL       |
 
   @TRX-158743 @tmsLink=TRX-158743 @QA
   Scenario Outline: Verification of an ability to open 'Edit Account Edge' modal in Support Tools>Directory>Market Centers/Organizations>MC details>'AccountEdge' tab by KWRI user with permissions for NA/Canadian MC
@@ -102,7 +105,6 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
-      | TEAMSBRAVOLEGAL       |
 
   @TRX-158745 @tmsLink=TRX-158745 @QA
   Scenario Outline:Verification of an ability to see 'Edit Account Edge' modal default state in Support Tools>Directory>Market Centers/Organizations>MC details>'AccountEdge' tab by KWRI user with permissions for NA/Canadian MC
@@ -121,7 +123,6 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
-      | TEAMSBRAVOLEGAL       |
 
   @TRX-158749 @tmsLink=TRX-158749 @TRX-158750 @tmsLink=TRX-158750 @e2e @QA
   Scenario Outline: Verification of an ability to change vendor for MC with AccountEdgeInt vendor in Support Tools>Directory>Market Centers/Organizations>MC details>'AccountEdge' tab by KWRI user with permissions
@@ -157,4 +158,3 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
-      | TEAMSBRAVOLEGAL       |

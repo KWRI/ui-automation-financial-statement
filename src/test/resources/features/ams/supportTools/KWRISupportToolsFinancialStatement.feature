@@ -19,28 +19,27 @@ Feature: KWRI Support Tools Financial Statement > Chart of Accounts
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
-      | TEAMSBRAVOLEGAL       |
     @PROD
     Examples:
       | user          |
       | DOP5000       |
       | DMCBROKER5000 |
 
-  @TRX-157072 @tmsLink=TRX-157072 @QA
+  @TRX-157072 @tmsLink=TRX-157072
   Scenario Outline: Verification of inability to see Support Tools> 'Financial Statement'>'Chart of Accounts' page by user w/o permissions
     Given user logs in as <user> user
     When user open Support Tools> 'Financial Statement'>'Chart of Accounts' page using url
     Then <step>
+    @QA
     Examples:
       | user                             | step                                               |
       | AVENGERS_MC_AGENT                | user is redirected to Command home page            |
+    @Manual
+    Examples:
+      |user                             | step                                               |
       | AVENGERS_MC_MCA                  | user is redirected to Command home page            |
       | AVENGERSMCMARKETCENTERLEADER     | user is redirected to Command home page            |
       | AVENGERSREGOPERATIONSMANAGER     | user is redirected to Command home page            |
-      | TEAMSBRAVOEXECUTIVE              | user is on Support Tools>Directory>Associates page |
-      | TEAMSBRAVOANALYST                | user is redirected to Command home page |
-      | TEAMSBRAVOREGIONALDIVISIONLEADER | user is on Support Tools>Directory>Associates page |
-      | TEAMSBRAVOMCANGEL                | user is on Support Tools>Directory>Associates page |
 
   @TRX-157071 @tmsLink=TRX-157071
   Scenario Outline: Verification of an ability to open Support Tools>'Financial Statement'>'Chart of Accounts' page by using direct link by KWRI user with permissions
@@ -51,7 +50,6 @@ Feature: KWRI Support Tools Financial Statement > Chart of Accounts
     Examples:
       | user                  |
       | TEAMSBRAVOSYSTEMADMIN |
-      | TEAMSBRAVOLEGAL       |
     @PROD
     Examples:
       | user          |

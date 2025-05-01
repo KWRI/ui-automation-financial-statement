@@ -66,9 +66,7 @@ Feature: Financial Statement Accounting applet
     @QA
     Examples:
       | user                 |
-      | TEAMSBRAVOMCA        |
       | TEAMSBRAVOOP         |
-      | TEAMSBRAVOTEAMLEADER |
     @PROD
     Examples:
       | user  |
@@ -83,22 +81,23 @@ Feature: Financial Statement Accounting applet
     @QA
     Examples:
       | user                 |
-      | TEAMSBRAVOMCA        |
       | TEAMSBRAVOOP         |
-      | TEAMSBRAVOTEAMLEADER |
     @PROD
     Examples:
       | user  |
       | QAMCA |
 
-  @TRX-156435 @tmsLink=TRX-156435 @QA
+  @TRX-156435 @tmsLink=TRX-156435
   Scenario Outline: Verification of inability to open "Accounting" page using direct link by users w/o permissions
     Given user logs in as <user> user
     When user open 'Accounting' page using url
     Then user is redirected to CommandMC main page
+    @QA
     Examples:
       | user                        |
       | AVENGERSREGDIRECTOR         |
+    @Manual
+    Examples:
       | AVENGERS_MC_MC_BROKER       |
       | AVENGERS_MC_GENERAL_MANAGER |
 
