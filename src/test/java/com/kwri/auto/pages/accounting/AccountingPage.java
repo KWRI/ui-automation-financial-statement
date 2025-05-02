@@ -1304,6 +1304,9 @@ public class AccountingPage extends BasePage implements Waits {
         assertTrue("Error - forbidden icon is not displayed!", getDismissIconInNetProfitErrorBanner().isDisplayed());
     }
 
+    /**
+     * User sees Not Authorized message on screen.
+     */
     public void verifyUserNotAuthorizedMessageAppeared() {
         this.driverUtils.verifyElementIsPresent(getBalanceSheetError(), true);
     }
