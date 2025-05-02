@@ -15,7 +15,7 @@ import static io.cucumber.core.options.Constants.GLUE_PROPERTY_NAME;
 @IncludeEngines("cucumber")
 // https://github.com/cucumber/cucumber-jvm/tree/main/junit-platform-engine#supported-discovery-selectors-and-filters
 @SelectClasspathResource("features") // << this must match the resource folder structure
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.kwri")
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.kwri.auto")
 public final class JUnitRunner { /* constructor for JUnit5 test runner */
     private JUnitRunner() {
 

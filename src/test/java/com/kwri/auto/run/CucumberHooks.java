@@ -117,7 +117,7 @@ public class CucumberHooks {
     @BeforeAll
     public static void setUpHeadlessMode() {
         ChromeOptions chromeOptions = BrowserOptions.getDefaultChromeOptions();
-//        chromeOptions.setHeadless(true);
+        chromeOptions.setHeadless(true);
         BrowserOptions.setChromeOptions(chromeOptions);
     }
 
