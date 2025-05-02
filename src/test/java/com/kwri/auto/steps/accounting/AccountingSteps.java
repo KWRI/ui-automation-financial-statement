@@ -439,4 +439,9 @@ public class AccountingSteps {
         this.common.waitForAjaxRequestsComplete();
         this.accountingPage.verifyNetProfitBannerIsPresent(shouldBeDisplayed);
     }
+
+    @When("verify user is not authorized message appeared")
+    public void verifyUserNotAuthorizedMessageAppeared() {
+        this.accountingPage.verifyUserNotAuthorizedMessageAppeared();
+    }
 }

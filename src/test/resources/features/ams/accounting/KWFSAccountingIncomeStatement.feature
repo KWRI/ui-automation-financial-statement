@@ -76,7 +76,7 @@ Feature: Financial Statement Accounting applet - Income Statement page
     And user sees Income Statement data is displayed in table with columns
     And user TEAMSBRAVOAMCA sees full list of accounts for Income Statement for orgId KWFS_TEST_TEAMS_BRAVO_7 for period "{(transactionPeriodForMC7)}"
     And user select "Aruba Market Center for Automation Testing" account in shell
-    Then user is redirected to CommandMC main page
+    Then verify user is not authorized message appeared
 
   @TRX-158535 @tmsLink=TRX-158535 @QA
   Scenario: Verification of an ability to see Income Statement data for past month in CommandMC>Accounting>"Income Statement" page by users with permissions

@@ -191,7 +191,7 @@ Feature: Financial Statement Accounting applet - Balance Sheet page
     And user TEAMSBRAVOAMCA sees full list of accounts value for every section for orgId KWFS_TEST_TEAMS_BRAVO_7 for period "{(transactionPeriodForMC)}"
     And user TEAMSBRAVOAMCA sees full list of accounts range for every section for orgId KWFS_TEST_TEAMS_BRAVO_7 for period "{(transactionPeriodForMC)}"
     And user select "Aruba Market Center for Automation Testing" account in shell
-    Then user is redirected to CommandMC main page
+    Then verify user is not authorized message appeared
 
   @TRX-158308 @tmsLink=TRX-158308 @QA
   Scenario: Verification of an ability to see disabled button to print out Balance Sheet for future financial month on CommandMC>Accounting> "Balance Sheet" tab by users with permissions

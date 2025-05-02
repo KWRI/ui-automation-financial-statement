@@ -17,7 +17,6 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
     @Manual
     Examples:
       | user                  |
-      | TEAMSBRAVOLEGAL       |
       | TEAMSBRAVOSUPPORT     |
     @PROD
     Examples:
@@ -38,7 +37,6 @@ Feature: KWRI Support Tools Market Centres page 'AccountEdge' tab
    @Manual
     Examples:
       | user                  |
-      | TEAMSBRAVOLEGAL       |
       | TEAMSBRAVOSUPPORT     |
     @PROD
     Examples:

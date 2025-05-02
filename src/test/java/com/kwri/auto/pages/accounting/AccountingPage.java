@@ -164,6 +164,9 @@ public class AccountingPage extends BasePage implements Waits {
     @FindBy(xpath = "//div[@data-testid='netProfitErrorBanner']//div/span[@color='red']")
     private WebElement forbiddenIconInNetProfitErrorBanner;
 
+    @FindBy(xpath = "//*[@data-testid='balance-sheet-error']")
+    private WebElement balanceSheetError;
+
     @Inject
     private Common common;
     @Inject
@@ -1299,5 +1302,9 @@ public class AccountingPage extends BasePage implements Waits {
         this.common.waitForPageToLoad();
         this.common.waitForAjaxRequestsComplete();
         assertTrue("Error - forbidden icon is not displayed!", getDismissIconInNetProfitErrorBanner().isDisplayed());
+    }
+
+    public void verifyUserNotAuthorizedMessageAppeared() {
+        this.driverUtils.verifyElementIsPresent(getBalanceSheetError(), true);
     }
 }

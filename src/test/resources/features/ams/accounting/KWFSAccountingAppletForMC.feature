@@ -91,13 +91,14 @@ Feature: Financial Statement Accounting applet
   Scenario Outline: Verification of inability to open "Accounting" page using direct link by users w/o permissions
     Given user logs in as <user> user
     When user open 'Accounting' page using url
-    Then user is redirected to CommandMC main page
+    Then verify user is not authorized message appeared
     @QA
     Examples:
       | user                        |
       | AVENGERSREGDIRECTOR         |
     @Manual
     Examples:
+      |user                         |
       | AVENGERS_MC_MC_BROKER       |
       | AVENGERS_MC_GENERAL_MANAGER |
 
