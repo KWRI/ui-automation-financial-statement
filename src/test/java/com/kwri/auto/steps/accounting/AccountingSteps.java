@@ -440,6 +440,9 @@ public class AccountingSteps {
         this.accountingPage.verifyNetProfitBannerIsPresent(shouldBeDisplayed);
     }
 
+    /**
+     * User sees Not Authorized message on screen.
+     */
     @When("verify user is not authorized message appeared")
     public void verifyUserNotAuthorizedMessageAppeared() {
         this.accountingPage.verifyUserNotAuthorizedMessageAppeared();
