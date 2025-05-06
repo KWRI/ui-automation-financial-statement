@@ -44,7 +44,7 @@ public class CloudmorePage extends BasePage implements Waits {
     @FindBy(xpath = "//a[@data-testId='nav-item-administration']")
     private WebElement administrationSideBarMenu;
 
-    @FindBy(xpath = "//a[@data-testId='nav-item-accounting']//a")
+    @FindBy(xpath = "//a[@data-testId='nav-item-accounting']//div")
     private WebElement accountingSideBarMenuSelected;
 
     @FindBy(xpath = "//a[@data-testId='nav-item-accounting']//a//p")

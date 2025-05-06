@@ -42,6 +42,7 @@ Feature: Financial Statement Accounting applet - "Account History" page
     And user sees list of accounts is sorted by "ACCT #" in ASC order by default
     And user TEAMSBRAVONAMCA sees list of all accounts history for an org TEST_NA_MC
     When user select "Austin SW" account in shell
+    And user selects "Account History" tab
     Then user sees list of all accounts from bookkeeping system with the following info
     And user sees list of accounts is sorted by "ACCT #" in ASC order by default
     And user TEAMSBRAVONAMCA sees list of all accounts history for an org AUSTIN_SW
@@ -59,7 +60,7 @@ Feature: Financial Statement Accounting applet - "Account History" page
     And user sees list of accounts is sorted by "ACCT #" in ASC order by default
     And user TEAMSBRAVOAMCA sees list of all accounts history for an org KWFS_TEST_TEAMS_BRAVO_3
     And user select "Aruba Market Center for Automation Testing" account in shell
-    Then user is redirected to CommandMC main page
+    Then verify user is not authorized message appeared
 
   @TRX-160411 @tmsLink=TRX-160411 @QA
   Scenario: Verification of inability to see Account History data in CommandMC>Accounting>"Account History" tab when no data uploaded from bookkeeping system yet
